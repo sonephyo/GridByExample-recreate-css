@@ -251,4 +251,24 @@ footer > div {
     .title {
         padding: 0.5rem;
     }
+
+    footer  {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        font-size: 2rem;
+    }
+        section {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            "one two"
+            "three four"
+            "five six"
+            "seven eight"
+            "nine ten"
+            "eleven eleven"
+    }
 }
