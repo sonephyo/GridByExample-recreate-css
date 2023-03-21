@@ -2,6 +2,9 @@
 
 :root {
     --title-size: 2.5rem;
+    --major-padding: 2.5rem;
+    --major-margin: 2.5rem;
+    --header-color : #404040;
 }
 
 /*Reset */
@@ -28,15 +31,16 @@ a {
 
  h1 {
     font-size: var(--title-size);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
  }
 
 
 
  header {
-    background-color: #404040;
-    padding: 2rem;
+    background-color: var(--header-color);
+    padding: var(--major-padding);
     position: relative;
+    line-height: 3rem;
  }
 
  /* Twitter link */
@@ -58,7 +62,7 @@ a {
  /* Title */
 
  .title {
-    margin: 2.5rem auto;
+    margin: 2rem auto;
     padding: 1rem;
     color: white;
  }
@@ -66,9 +70,9 @@ a {
  /* Navigation Bar */
 
 nav {
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.593);
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     bottom: 0;
     left:0;
 
@@ -84,4 +88,86 @@ nav {
  .options > li {
     display:inline;
  }
+
+ /* Main Section */
+
+ section {
+    margin: var(--major-margin) 3.5rem;
+
+    display:grid;
+    grid-template-columns: 50% 1fr 1fr;
+    grid-template-areas: 
+    "one one two"
+    "three three three"
+    "four five five"
+    "six six seven"
+    "eight nine ten"
+    "eleven eleven eleven";
+    gap: 2rem;
+ }
+
+  article {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid rgb(70, 70, 70);
+    background-color: whitesmoke;
+ }
+
+ section > article:nth-child(1) {
+    grid-area: one;
+    background-color: var(--header-color);
+    color: white;
+
+ }
+ section > article:nth-child(2) {
+    grid-area: two;
+ }
+ section > article:nth-child(3) {
+    grid-area: three;
+    background-color: rgb(199, 97, 199);
+    color:white;
+ }
+ section > article:nth-child(4) {
+    grid-area: four;
+ }
+ section > article:nth-child(5) {
+    grid-area: five;
+ }
+ section > article:nth-child(6) {
+    grid-area: six;
+ }
+ section > article:nth-child(7) {
+    grid-area: seven;
+ }
+ section > article:nth-child(8) {
+    grid-area: eight;
+ }
+ section > article:nth-child(9) {
+    grid-area: nine;
+ }
+ section > article:nth-child(10) {
+    grid-area: ten;
+ }
+ section > article:nth-child(11) {
+    grid-area: eleven;
+ }
+
+/* Footer */
+
+footer {
+    background-color: var(--header-color);
+    padding: var(--major-margin);
+}
+
+footer > div {
+    background-color: whitesmoke;
+    width: 95%;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.footer-bullet-points {
+    padding-left: 40px;
+}
 
