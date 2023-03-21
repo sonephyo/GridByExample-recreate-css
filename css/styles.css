@@ -5,6 +5,8 @@
     --major-padding: 2.5rem;
     --major-margin: 2.5rem;
     --header-color : #404040;
+
+    --ipad-padding: 1rem;
 }
 
 /*Reset */
@@ -15,7 +17,7 @@
     box-sizing: border-box;
  }
 
-a, a:visited {
+a{
     text-decoration: none;
     color: black;
 }
@@ -23,7 +25,7 @@ a, a:visited {
  body {
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
  }
 
  p {
@@ -96,10 +98,6 @@ nav {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
- }
-
- .options > li {
-    display:inline;
  }
 
  /* Main Section */
@@ -201,4 +199,56 @@ footer > div {
 
 .footer-ending {
     margin-top: 1rem;
+}
+
+
+/* Introducing Media Queries */
+
+@media screen and (max-width: 1024px) {
+    section {
+        grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "one one two"
+            "three three three"
+            "four four five"
+            "seven six six"
+            "eight nine ten"
+            "eleven eleven eleven";
+    }
+}
+@media screen and (max-width: 768px) {
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        position:static;
+    }
+    header {
+        padding: 0;
+    }
+    .heading-bar {
+        padding: var(--ipad-padding);
+    }
+        section {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven"
+            "eight"
+            "nine"
+            "ten"
+            "eleven"
+    }
+}
+
+@media  screen and (max-width:480px) {
+    .title {
+        padding: 0.5rem;
+    }
 }
