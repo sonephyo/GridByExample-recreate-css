@@ -15,7 +15,7 @@
     box-sizing: border-box;
  }
 
-a {
+a, a:visited {
     text-decoration: none;
     color: black;
 }
@@ -26,22 +26,35 @@ a {
     font-size: 1.25rem;
  }
 
-
- /* Utility Classes */
-
- h1 {
-    font-size: var(--title-size);
-    padding: 1.5rem 0;
+ p {
+    font-size: 1rem;
  }
 
 
+ /* Utility Classes */
+
+h1,h2 {
+    padding-bottom: 1rem;
+}
+
+ h1 {
+    font-size: var(--title-size);
+ }
+
+h2 {
+    padding: 0.5rem 0;
+}
 
  header {
     background-color: var(--header-color);
     padding: var(--major-padding);
-    position: relative;
+    padding-top: 1rem;
     line-height: 3rem;
+    position: relative;
+
  }
+
+
 
  /* Twitter link */
  .my-twitter-link {
@@ -62,8 +75,8 @@ a {
  /* Title */
 
  .title {
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
     color: white;
  }
 
@@ -72,7 +85,7 @@ a {
 nav {
     background-color: rgba(245, 245, 245, 0.593);
     width: 100%;
-    padding: 1rem 4rem;
+    padding: 0 4rem;
     bottom: 0;
     left:0;
 
@@ -111,13 +124,13 @@ nav {
     border-radius: 15px;
     border: 2px solid rgb(70, 70, 70);
     background-color: whitesmoke;
+    min-height: 10rem;
  }
 
  section > article:nth-child(1) {
     grid-area: one;
     background-color: var(--header-color);
     color: white;
-
  }
  section > article:nth-child(2) {
     grid-area: two;
@@ -129,7 +142,21 @@ nav {
  }
  section > article:nth-child(4) {
     grid-area: four;
+    position: relative;
  }
+
+ .new-tag {
+    position: absolute;
+    transform: rotate(-45deg);
+    top:0;
+    left: -1rem;
+
+    background-color: green;
+    padding: 0.25rem;
+    font-size: 1rem;
+    color: white;
+ }
+
  section > article:nth-child(5) {
     grid-area: five;
  }
@@ -165,9 +192,13 @@ footer > div {
     padding: 2rem;
     margin: 0 auto;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .footer-bullet-points {
     padding-left: 40px;
 }
 
+.footer-ending {
+    margin-top: 1rem;
+}
