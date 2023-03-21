@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Roboto&display=swap');
 
+:root {
+    --title-size: 2.5rem;
+}
+
+/*Reset */
+
  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
  }
+
+a {
+    text-decoration: none;
+    color: black;
+}
 
  body {
     font-family: 'Edu NSW ACT Foundation', cursive;
@@ -12,4 +23,65 @@
     font-size: 1.25rem;
  }
 
- 
+
+ /* Utility Classes */
+
+ h1 {
+    font-size: var(--title-size);
+    padding: 1rem 0;
+ }
+
+
+
+ header {
+    background-color: #404040;
+    padding: 2rem;
+    position: relative;
+ }
+
+ /* Twitter link */
+ .my-twitter-link {
+    text-align: end;
+    font-size: small;
+ }
+
+ .follow-link {
+    border: 1px solid blue;
+    border-radius: 15px;
+    background-color: blue;
+
+    color:white;
+    padding: 0.5rem;
+ }
+
+
+ /* Title */
+
+ .title {
+    margin: 2.5rem auto;
+    padding: 1rem;
+    color: white;
+ }
+
+ /* Navigation Bar */
+
+nav {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 1rem 2rem;
+    bottom: 0;
+    left:0;
+
+    position: absolute;
+}
+
+ .options {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .options > li {
+    display:inline;
+ }
+
