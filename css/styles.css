@@ -5,7 +5,6 @@
     --major-padding: 2.5rem;
     --major-margin: 2.5rem;
     --header-color : #404040;
-
     --ipad-padding: 1rem;
 }
 
@@ -25,7 +24,7 @@ a{
  body {
     font-family: 'Edu NSW ACT Foundation', cursive;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
  }
 
  p {
